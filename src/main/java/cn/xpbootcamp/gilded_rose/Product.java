@@ -12,5 +12,17 @@ abstract class Product {
     this.sellIn = sellIn;
   }
 
-  abstract int getQualityByDay(int sellDay);
+  int getQualityByDay(int sellDay){
+    updateQualityByDay(sellDay);
+
+    if (quality < MIN_PRODUCT_QUALITY) {
+      return MIN_PRODUCT_QUALITY;
+    } else if (quality > MAX_PRODUCT_QUALITY) {
+      return MAX_PRODUCT_QUALITY;
+    } else {
+      return quality;
+    }
+  }
+
+  abstract void updateQualityByDay(int sellDay);
 }

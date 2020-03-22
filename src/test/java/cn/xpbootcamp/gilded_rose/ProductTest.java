@@ -33,4 +33,18 @@ class ProductTest {
 
     assertEquals(3, product.getQualityByDay(3));
   }
+
+  @Test
+  void theQualityShouldBeSixWhenOneDayOutOfSellInGivenAgedBrieProductQualityIsFive() {
+    Product product = new AgedBrieProduct(5, 1);
+
+    assertEquals(6, product.getQualityByDay(2));
+  }
+
+  @Test
+  void theQualityShouldBeSevenWhenTwoDayOutOfSellInGivenAgedBrieProductQualityIsFive() {
+    Product product = new AgedBrieProduct(5, 1);
+
+    assertEquals(7, product.getQualityByDay(3));
+  }
 }

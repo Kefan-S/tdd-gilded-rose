@@ -1,18 +1,17 @@
 package cn.xpbootcamp.gilded_rose;
 
-class BaseProduct extends Product{
+class AgedBrieProduct extends Product {
 
-  BaseProduct(int quality, int sellIn) {
+  AgedBrieProduct(int quality, int sellIn) {
     super(quality, sellIn);
   }
 
   @Override
   void updateQualityByDay(int sellDay) {
-    int declineBase = 1;
+    int increaseBase = 1;
     for (int i = 0; i < sellDay; i++) {
       if (i >= sellIn) {
-        quality -= declineBase;
-        declineBase++;
+        quality += increaseBase;
       }
     }
   }
