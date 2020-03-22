@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class ProductTest {
 
   @Test
-  void theQualityShouldBeZoreWhenInitProductGivenProductQualityIsNegativeOne() {
+  void theQualityShouldBeZeroWhenInitProductGivenProductQualityIsNegativeOne() {
     Product product = new BaseProduct(-1, 1);
 
     assertEquals(0, product.getQualityByDay(1));
@@ -77,7 +77,7 @@ class ProductTest {
   }
 
   @Test
-  void theQualityShouldBeZoreWhenOutOfSellInGivenBackstagePassQualityIsFive() {
+  void theQualityShouldBeZeroWhenOutOfSellInGivenBackstagePassQualityIsFive() {
     Product product = new BackstagePass(5, 15);
 
     assertEquals(0, product.getQualityByDay(16));
