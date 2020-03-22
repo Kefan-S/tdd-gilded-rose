@@ -1,8 +1,8 @@
 package cn.xpbootcamp.gilded_rose;
 
-class AgedBrieProduct extends Product {
+class AgedBrie extends Product {
 
-  AgedBrieProduct(int quality, int sellIn) {
+  AgedBrie(int quality, int sellIn) {
     super(quality, sellIn);
   }
 
