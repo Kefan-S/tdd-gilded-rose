@@ -68,4 +68,11 @@ class ProductTest {
 
     assertEquals(9, product.getQualityByDay(7));
   }
+
+  @Test
+  void theQualityShouldBeEighteenWhenFourDayBeforeSellInGivenBackstagePassQualityIsFive() {
+    Product product = new BackstagePass(5, 15);
+
+    assertEquals(18, product.getQualityByDay(11));
+  }
 }

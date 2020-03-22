@@ -9,7 +9,9 @@ public class BackstagePass extends Product {
   @Override
   void updateQualityByDay(int sellDay) {
     int interval = sellIn - sellDay;
-    if (interval < 10) {
+    if (interval < 5) {
+      quality += (5 - interval) * 3 + 10;
+    } else if (interval < 10) {
       quality += (10 - interval) * 2;
     }
   }
